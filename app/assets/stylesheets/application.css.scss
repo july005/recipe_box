@@ -16,6 +16,9 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Rock+Salt);
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
 
 @mixin box-shadow {
 	-webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
@@ -26,7 +29,14 @@
 $red: #DB6161;
 
 body {
-	background: rgb(235, 238, 243);
+	height: 100%;
+  background-image: url("background4.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-color: gray;
 }
 
 .main_content {
@@ -44,21 +54,25 @@ body {
 }
 
 .navbar {
-	margin-bottom: 50px;
+	margin-bottom: 100px;
 	@include box-shadow;
 	border: none;
+	font-size: 30px;
+	padding: 70px;
 	.navbar-brand {
+		font-family: 'Special Elite', cursive;
 		text-transform: uppercase;
 		letter-spacing: -1px;
 		font-weight: bold;
-		font-size: 25px;
+		font-size: 100px;
 		a {
-			color: $red;
+			color: gray;
 		}
 	}
 }
 
 .recipe {
+	font-color: gray;
 	background: white;
 	border-radius: 5px;
 	margin-bottom: 40px;
@@ -120,6 +134,11 @@ body {
 	}
 }
 
+#recipe_index {
+	background:rgba(255,255,255, 1);
+}
+
+
 #ingredients, #directions {
 	margin-bottom: 50px;
 	ul, ol {
@@ -131,8 +150,14 @@ body {
 	}
 }
 
+#form_signup {
+	background:rgba(255,255,255, 0.9);
+}
+
+
 .form-inline {
 	margin-top: 15px;
+	font-color: gray;
 }
 .form-input {
 	width: 65% !important;
